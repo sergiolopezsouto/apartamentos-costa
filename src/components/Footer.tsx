@@ -7,8 +7,8 @@ export default function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="bg-gray-900 text-white py-64">
-      <div className="container mx-auto px-20 sm:px-28 lg:px-40">
+    <footer className="bg-gray-900 text-white py-48">
+      <div className="container mx-auto px-12 sm:px-16 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           <div>
             <h3 className="text-lg font-semibold mb-4">Salou Apartments</h3>

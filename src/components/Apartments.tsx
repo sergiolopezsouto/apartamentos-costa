@@ -1,13 +1,10 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { FaBed, FaUsers, FaDoorOpen, FaBath } from 'react-icons/fa';
-import { FiExternalLink } from 'react-icons/fi';
 import Image from 'next/image';
 
 interface Apartment {
