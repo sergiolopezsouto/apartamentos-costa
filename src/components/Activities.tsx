@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { FaUmbrellaBeach, FaLandmark, FaUtensils, FaMoon, FaShoppingBag } from 'react-icons/fa';
+import { FaUmbrellaBeach, FaLandmark, FaUtensils, FaMoon, FaShoppingBag, FaWater } from 'react-icons/fa';
 
 const activities = [
   {
@@ -49,6 +49,15 @@ const activities = [
       es: 'Compra en mercados locales y centros comerciales modernos.',
     },
   },
+  {
+    id: 'waterParks',
+    icon: FaWater,
+    title: 'activities.waterParks',
+    description: {
+      en: 'Cool off at Costa Caribe Aquatic Park and enjoy thrilling water slides and pools.',
+      es: 'Refréscate en el Parque Acuático Costa Caribe y disfruta de emocionantes toboganes y piscinas.',
+    },
+  },
 ];
 
 export default function Activities() {
@@ -58,9 +67,9 @@ export default function Activities() {
     : 'en';
 
   return (
-    <section id="activities" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">
+    <section id="activities" className="py-64 bg-gray-50">
+      <div className="container mx-auto px-20 sm:px-28 lg:px-40">
+        <h2 className="text-3xl font-bold text-center mb-20">
           {t('activities.title')}
         </h2>
 

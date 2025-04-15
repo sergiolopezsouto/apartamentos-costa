@@ -14,7 +14,9 @@
     "viewOnAirbnb": "View on Airbnb",
     "contactWhatsapp": "Contact via WhatsApp",
     "capacity": "Capacity",
-    "beds": "Beds"
+    "beds": "Beds",
+    "dorms": "Bedrooms",
+    "bathrooms": "Bathrooms"
   },
   "activities": {
     "title": "What to do in Salou",
