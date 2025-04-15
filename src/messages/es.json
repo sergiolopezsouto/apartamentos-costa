@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "apartments": "Apartamentos",
+    "activities": "Actividades",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Bienvenidos a Salou",
+    "subtitle": "Tu destino perfecto de vacaciones en la Costa Dorada"
+  },
+  "apartments": {
+    "title": "Nuestros Apartamentos",
+    "viewOnAirbnb": "Ver en Airbnb",
+    "contactWhatsapp": "Contactar por WhatsApp",
+    "capacity": "Capacidad",
+    "beds": "Camas"
+  },
+  "activities": {
+    "title": "Qué hacer en Salou",
+    "beaches": "Playas",
+    "themeParks": "Parques Temáticos",
+    "restaurants": "Restaurantes",
+    "nightlife": "Vida Nocturna",
+    "shopping": "Compras"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+} 

@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Home",
+    "apartments": "Apartments",
+    "activities": "Activities",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to Salou",
+    "subtitle": "Your perfect vacation destination on the Costa Dorada"
+  },
+  "apartments": {
+    "title": "Our Apartments",
+    "viewOnAirbnb": "View on Airbnb",
+    "contactWhatsapp": "Contact via WhatsApp",
+    "capacity": "Capacity",
+    "beds": "Beds"
+  },
+  "activities": {
+    "title": "What to do in Salou",
+    "beaches": "Beaches",
+    "themeParks": "Theme Parks",
+    "restaurants": "Restaurants",
+    "nightlife": "Nightlife",
+    "shopping": "Shopping"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+} 
