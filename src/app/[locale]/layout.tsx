@@ -11,14 +11,14 @@ export function generateStaticParams() {
 
 interface LocaleLayoutProps {
   children: ReactNode;
-  params: { locale: string }; 
+  params: Promise<{ locale: string }>; 
 }
 
 export default async function LocaleLayout({
   children,
   params,
 }: LocaleLayoutProps) {
-  const { locale } = params;
+  const { locale } = await params;
   let messages;
   
   try {

@@ -7,6 +7,10 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
+  webpack(config, { isServer }) {
+    config.cache = false; 
+    return config;
+  },
 };
 
 export default withNextIntl(nextConfig);
