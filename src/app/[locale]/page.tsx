@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import Apartments from '@/components/Apartments';
 import Activities from '@/components/Activities';
 
-export default function Home() {
+export default function Home({ params }: { params: { locale: string } }) {
   return (
     <>
       <Hero />
@@ -10,4 +10,4 @@ export default function Home() {
       <Activities />
     </>
   );
-} 
+}
