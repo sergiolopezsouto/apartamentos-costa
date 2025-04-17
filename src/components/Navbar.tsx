@@ -22,11 +22,20 @@ export default function Navbar() {
     };
   }, [scrolled]);
 
+  const handleScrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else if (sectionId === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     { href: '/', label: 'Inicio' },
-    { href: '/#apartments', label: 'Apartamentos' },
-    { href: '/#activities', label: 'Actividades' },
-    { href: '/#testimonials', label: 'Testimonios' },
+    { href: 'apartments', label: 'Apartamentos' },
+    { href: 'activities', label: 'Actividades' },
+    { href: 'testimonials', label: 'Testimonios' },
   ];
 
   return (
@@ -37,8 +46,12 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default link behavior
+                  handleScrollToSection(item.href); // Scroll to the section
+                }}
                 className={`transition-colors text-base font-bold ${scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
               >
                 {item.label}
@@ -64,10 +77,14 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default link behavior
+                  handleScrollToSection(item.href); // Scroll to the section
+                  setIsMenuOpen(false); // Close the mobile menu
+                }}
                 className="block px-3 py-2 text-center text-sm font-bold text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
