@@ -1,11 +1,7 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { FaBed, FaUsers, FaDoorOpen, FaBath } from 'react-icons/fa';
 import Image from 'next/image';
+import { FaBed, FaUsers, FaDoorOpen, FaBath } from 'react-icons/fa';
 
 interface Apartment {
   id: string;
@@ -23,8 +19,8 @@ interface Apartment {
 const apartments: Apartment[] = [
   {
     id: '1',
-    name: 'Apartment 1',
-    address: 'Salou, Spain',
+    name: 'Apartamento 1',
+    address: 'Salou, España',
     capacity: 6,
     beds: 3,
     dorms: 2,
@@ -35,8 +31,8 @@ const apartments: Apartment[] = [
   },
   {
     id: '2',
-    name: 'Apartment 2',
-    address: 'Salou, Spain',
+    name: 'Apartamento 2',
+    address: 'Salou, España',
     capacity: 4,
     beds: 2,
     dorms: 1,
@@ -47,8 +43,8 @@ const apartments: Apartment[] = [
   },
   {
     id: '3',
-    name: 'Apartment 3',
-    address: 'Salou, Spain',
+    name: 'Apartamento 3',
+    address: 'Salou, España',
     capacity: 4,
     beds: 2,
     dorms: 1,
@@ -60,19 +56,17 @@ const apartments: Apartment[] = [
 ];
 
 export default function Apartments() {
-  const t = useTranslations();
-
   return (
     <section id="apartments" className="py-48 bg-white">
       <div className="container mx-auto px-8">
-        <h2 className="text-4xl font-bold text-center mb-16">Our Apartments</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">Nuestros Apartamentos</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {apartments.map((apartment) => (
             <div key={apartment.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
                   src={apartment.images[0]}
-                  alt={apartment.name}
+                  alt={`Image of ${apartment.name}`}
                   fill
                   className="object-cover"
                 />
@@ -83,21 +77,21 @@ export default function Apartments() {
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="flex items-center">
                     <FaBed className="text-blue-600 mr-2" />
-                    <span>{apartment.beds} {t('apartments.beds')}</span>
+                    <span>{apartment.beds} Camas</span>
                   </div>
                   <div className="flex items-center">
                     <FaUsers className="text-blue-600 mr-2" />
-                    <span>{apartment.capacity} {t('apartments.capacity')}</span>
+                    <span>{apartment.capacity} Capacidad</span>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="flex items-center">
                     <FaDoorOpen className="text-blue-600 mr-2" />
-                    <span>{apartment.dorms} {t('apartments.dorms')}</span>
+                    <span>{apartment.dorms} Dormitorios</span>
                   </div>
                   <div className="flex items-center">
                     <FaBath className="text-blue-600 mr-2" />
-                    <span>{apartment.bathrooms} {t('apartments.bathrooms')}</span>
+                    <span>{apartment.bathrooms} Baños</span>
                   </div>
                 </div>
                 <div className="flex space-x-4 mt-10 mb-4">
@@ -110,7 +104,7 @@ export default function Apartments() {
                     <div className="flex items-center justify-center">
                       <Image
                         src="/images/airbnb-icon.png"
-                        alt="Airbnb"
+                        alt="Airbnb logo"
                         width={24}
                         height={24}
                         className="mr-2 object-contain"
@@ -127,7 +121,7 @@ export default function Apartments() {
                     <div className="flex items-center justify-center">
                       <Image
                         src="/images/whatsapp-icon.png"
-                        alt="WhatsApp"
+                        alt="WhatsApp logo"
                         width={24}
                         height={24}
                         className="mr-2 object-contain"

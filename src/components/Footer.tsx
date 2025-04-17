@@ -1,23 +1,16 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-
 export default function Footer() {
-  const t = useTranslations();
-
   return (
     <footer className="bg-gray-900 text-white py-48">
       <div className="container mx-auto px-12 sm:px-16 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           <div>
             <h3 className="text-lg font-semibold mb-4">Salou Apartments</h3>
-            <p className="text-gray-300">
-              Your perfect vacation destination on the Costa Dorada
-            </p>
+            <p className="text-gray-300">Tu destino perfecto de vacaciones en la Costa Dorada</p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('navigation.contact')}</h3>
+            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -43,28 +36,28 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link
+                <a
                   href="/privacy"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  {t('footer.privacy')}
-                </Link>
+                  Política de Privacidad
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/terms"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  {t('footer.terms')}
-                </Link>
+                  Términos de Servicio
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Salou Apartments. {t('footer.rights')}</p>
+          <p>&copy; {new Date().getFullYear()} Salou Apartments. Todos los derechos reservados</p>
         </div>
       </div>
     </footer>
   );
-} 
+}

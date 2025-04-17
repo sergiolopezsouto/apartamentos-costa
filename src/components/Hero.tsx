@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -14,8 +13,6 @@ const images = [
 ];
 
 export default function Hero() {
-  const t = useTranslations();
-
   return (
     <div className="relative h-screen">
       <Swiper
@@ -42,14 +39,10 @@ export default function Hero() {
       
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div className="text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            {t('hero.title')}
-          </h1>
-          <p className="text-xl md:text-2xl">
-            {t('hero.subtitle')}
-          </p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Bienvenido a Apartamentos Costa Salou</h1>
+          <p className="text-xl md:text-2xl">Tu destino perfecto de vacaciones en la Costa Dorada</p>
         </div>
       </div>
     </div>
   );
-} 
+}
