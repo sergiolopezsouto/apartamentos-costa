@@ -1,12 +1,10 @@
 "use client";
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,6 +26,7 @@ export default function Navbar() {
     { href: '/', label: 'Inicio' },
     { href: '/#apartments', label: 'Apartamentos' },
     { href: '/#activities', label: 'Actividades' },
+    { href: '/#testimonials', label: 'Testimonios' },
   ];
 
   return (
