@@ -74,7 +74,7 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
-        <ErrorBoundary>
+        <ErrorBoundary someProp={{}}>
           {children}
         </ErrorBoundary>
       </body>
